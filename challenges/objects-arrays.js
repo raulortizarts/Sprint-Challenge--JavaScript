@@ -153,7 +153,12 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+//const lowerCase = [];
+
+const lowerCase = zooAnimals.map((state) => {
+  return {'animal_name': state.animal_name.toLowerCase()};
+});
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -169,13 +174,19 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
+const reduceZooPopulation = zooAnimals.reduce((total, state) => {
+  return total += state.population;
+}, 0);
+
+
 const populationTotal = 0;
 console.log(populationTotal);
-
 
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
+
+I did.
 */
 

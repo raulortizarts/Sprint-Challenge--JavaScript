@@ -6,7 +6,9 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-
+function consume(a, b, cb) {
+  return 
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -25,8 +27,11 @@
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
+
 // Explanation: 
 
+//Bacause a new scope is created that encloses the variables inside. These are "quarantined" from the rest of the scope but can look outwards for ref (like quarantined people watching the new).
+//The external func can't come into contact with the quarantined code. Hopefully that's a good analogy. 
 
 const external = "I'm outside the function";
 
