@@ -94,6 +94,12 @@ Once you have the new array created, sort the universities alphabetically and lo
 const universities = [];
 console.log(universities)
 
+const Universities = graduates.map ((univ) => {
+	return {"university":univ.university};
+}
+})
+console.log (Universities);
+
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
@@ -131,6 +137,14 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+for(let i = 0; i < zooAnimals.length; i++) {
+  let names = {};
+  names.animal_name = zooAnimals[i].animal_name;
+  names.scientific_name = zooAnimals[i].scientific_name;
+  animalNames.push(names);
+  names = {};
+}
+
 console.log(animalNames);
 
 /* Request 2: .map()    
